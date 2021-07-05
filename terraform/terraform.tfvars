@@ -1,0 +1,6 @@
+env_prefix = "dev"
+instance_type = "t2.micro"
+#my_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDegNo8IpI9Ixf+7WgBAIx2Jy3J15f61Vw4oWvP8JfA0QGZcgFeil0vEROXP52qRt1eAkqkRm26m6qSGesIoKSDuySsFJquSNDq00+Nto4qZeOg+ah533MN3TxBpMZ8xlM+vhhLQuH3GpufF+5bVWTVAcFlAF59sn2hDnmZ11NjOtR5H2zwMe5GsUJzVo5EYIGI3wC/ksgd4zS440r6g2KS9wIfoszI+tT1lRIYaw/45eQdwGc2T+STCuAJMQkxYoIJjvVsnMWmgqsE34nidKO3LwlUcQALJ7uFJA5C0b6DRmFaZpm9pMZ6qZv04zxQC3XschubPH2P8D2wekNXe1Je0dscbMjcvkeSUZIUIszeMcqCuQmGw6+hQet3Fi/meck/Ppbc+oZxe/KgYTNO7KwZxhxxR/WSgbuiqJqEW323qBINPu6t2oV9d8UXCvk71huOGomDVMuokiQAoJh3m0yVSR6WL8btBrhqqLiXNBLr8YRNcZOXyHsLei0YQSzDCUE= armen.hov24@gmail.com
+public_key_location  = "/home/armen/.ssh/id_rsa.pub"
+#private_key_location = "/home/armen/.ssh/id_rsa"
+image_name = "ubuntu-image-test"

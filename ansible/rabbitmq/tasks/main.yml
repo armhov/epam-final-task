@@ -1,0 +1,47 @@
+---
+# tasks file for rabbitmq
+
+    - name: 'Install the required packages'
+      apt:
+        name:
+          - 'curl'
+          - 'gnupg'
+          - 'apt-transport-https'
+        state: 'present'
+        update_cache: true
+      become: true
+
+    - name: 'Install erlang'
+      apt:
+        name:
+          - 'erlang'
+        state: present
+        update_cache: yes
+      become: true
+
+    - name: 'Install rabbitmq'
+      apt: 
+        name: rabbitmq-server
+        state: present
+        update_cache: yes
+      become: true
+
+    - name: 'Enable rabbitmq plugins'
+      rabbitmq_plugin:
+        names: rabbitmq_management
+        state: enabled
+      become: true
+      notify:
+        - Restart RabbitMQ service
+
+    - name: 'Add rabbitmq admin user'
+      community.rabbitmq.rabbitmq_user:
+        user: admin
+        password: superpassword
+        vhost: /
+        tags: "administrator"
+        configure_priv: .*
+        read_priv: .*
+        write_priv: .*
+        state: present
+      become: true
