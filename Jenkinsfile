@@ -16,10 +16,9 @@ pipeline {
         stage("Clone code from VCS") {
             steps {
                 script {
-                    git changelog: false, 
+                    git branch: 'main', 
                     credentialsId: 'github-ssh-key', 
-                    poll: false, 
-                    url: 'git@github.com:epam-yerevan-practice-task/api-gateway.git'
+                    url: 'git@github.com:armhov/epam-final-task.git'
                 }
             }
         }
