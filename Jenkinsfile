@@ -23,24 +23,29 @@ pipeline {
                 }
             }
         }
-        stage("Maven Build") {
+//         stage("Maven Build") {
+//             steps {
+//                 script {
+//                     sh "mvn clean package -DskipTests=true"
+//                 }
+//             }
+//         }
+//         stage("Publish to Nexus Repository Manager") {
+//             steps {
+//                 script {
+//                     nexusArtifactUploader artifacts: [[artifactId: 'java-api', classifier: '', file: '/var/lib/jenkins/workspace/api-gateway-test/target/api-gateway.jar', type: 'jar']], credentialsId: 'nexus-credentials', 
+//                     groupId: 'api-gateway',
+//                     nexusUrl: 'localhost:8081',
+//                     nexusVersion: 'nexus3',
+//                     protocol: 'http',
+//                     repository: 'api-gateway-releases',
+//                     version: '$BUILD_NUMBER'
+//                 }
+//             }
+//         }
+        stage('====Testing======') {
             steps {
-                script {
-                    sh "mvn clean package -DskipTests=true"
-                }
-            }
-        }
-        stage("Publish to Nexus Repository Manager") {
-            steps {
-                script {
-                    nexusArtifactUploader artifacts: [[artifactId: 'java-api', classifier: '', file: '/var/lib/jenkins/workspace/api-gateway-test/target/api-gateway.jar', type: 'jar']], credentialsId: 'nexus-credentials', 
-                    groupId: 'api-gateway',
-                    nexusUrl: 'localhost:8081',
-                    nexusVersion: 'nexus3',
-                    protocol: 'http',
-                    repository: 'api-gateway-releases',
-                    version: '$BUILD_NUMBER'
-                }
+                sh 'ls -la'
             }
         }
     }
