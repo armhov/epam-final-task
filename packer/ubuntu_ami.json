@@ -1,5 +1,6 @@
 {
   "builders": [{
+    "region": "us-east-2",
     "type":"amazon-ebs",
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
