@@ -4,7 +4,7 @@
     "type":"amazon-ebs",
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "ubuntu-latest-prod-{{timestamp}}",
+    "ami_name": "ubuntu-api-gtw-prod-{{timestamp}}",
     "force_deregister": true,
     "force_delete_snapshot": true,
     "tags": {

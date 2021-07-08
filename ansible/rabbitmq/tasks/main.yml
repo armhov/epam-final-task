@@ -35,7 +35,7 @@
         - Restart RabbitMQ service
 
     - name: 'Add rabbitmq admin user'
-      community.rabbitmq.rabbitmq_user:
+      rabbitmq_user:
         user: admin
         password: superpassword
         vhost: /
